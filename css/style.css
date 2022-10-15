@@ -22,7 +22,7 @@ body {
 }
 .form-v4-content  {
 	background: #fff;
-	width: 850px;
+	width: 1300px;
 	border-radius: 10px;
 	-o-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -45,6 +45,9 @@ body {
 	padding: 6px 0 0;
 	margin-bottom: 34px;
 }
+
+
+
 .form-v4-content .form-left {
 	margin-bottom: -6px;
 }
@@ -91,9 +94,55 @@ body {
     padding: 20px 40px;
 	position: relative;
 	width: 100%;
+
+}
+
+.form-v4-content .form-right {
+    padding: 15px 0;
+	position: relative;
+	width: 60%;
+	background: #ffffff;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.form-v4-content .tab {
+	margin: 5px 0 48px;
+	width: 130%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -o-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+.form-v4-content .tab .tab-inner {
+	width: 100%;
+}
+.form-v4-content .tab .tablinks {
+	background: transparent;
+	border: none;
+	outline: none;
+	-o-outline: none;
+	-ms-outline: none;
+	-moz-outline: none;
+	-webkit-outline: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: rgb(0, 0, 0);
+	padding-bottom: 10px;
+	border-bottom: 4px solid;
+	border-bottom-color: rgba(255, 6, 6, 0.2);
+	width: 100%;
+}
+.form-v4-content .tab .tablinks.active {
+	font-weight: 700;
+	color: #fff;
+	border-bottom-color: #ff3a17;
 }
 .form-v4-content .form-detail h2 {
-	color: #3786bd;
+	color: #ff1c1c;
 }
 .form-v4-content .form-detail .form-group {
 	display: flex;
@@ -174,7 +223,7 @@ body {
     font-weight: 900;
 }
 .form-v4-content .form-detail .input-text {
-	margin-bottom: 27px;
+	margin-bottom: 11px;
 }
 .form-v4-content .form-detail input {
 	width: 100%;
@@ -270,6 +319,8 @@ body {
 	padding: 12.5px;
 }
 
+
+
 /* Responsive */
 @media screen and (max-width: 991px) {
 	.form-v4-content {
@@ -289,6 +340,19 @@ body {
 		padding: 30px 20px 30px 20px;
 	    width: auto;
 	}
+	.form-v4-content .form-right {
+		width: auto;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 8px;
+	}
+	.form-v4-content .tab {
+		margin-top: 45px;
+	}
+	.form-v4-content .form-detail .register {
+		margin-bottom: 80px;
+	}
+
+	
 }
 @media screen and (max-width: 575px) {
 	.form-v4-content .form-detail .form-group {
