@@ -106,7 +106,7 @@ body {
 	border-bottom-right-radius: 8px;
 }
 .form-v4-content .tab {
-	margin: 5px 0 48px;
+	margin: 5px 0 49px;
 	width: 130%;
     display: flex;
     display: -webkit-flex;
@@ -117,7 +117,7 @@ body {
     -webkit-justify-content: space-between;
 }
 .form-v4-content .tab .tab-inner {
-	width: 100%;
+	width: 80%;
 }
 .form-v4-content .tab .tablinks {
 	background: transparent;
@@ -128,102 +128,139 @@ body {
 	-moz-outline: none;
 	-webkit-outline: none;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 15px;
-	font-weight: 400;
+	font-size: 13px;
+	font-weight: 200;
 	color: rgb(0, 0, 0);
 	padding-bottom: 10px;
 	border-bottom: 4px solid;
 	border-bottom-color: rgba(255, 6, 6, 0.2);
 	width: 100%;
 }
-.form-v4-content .tab .tablinks.active {
+.form-v4-content .tab .tablinks.active { /*when tab is clicked*/
 	font-weight: 700;
-	color: #fff;
+	color: rgb(255, 14, 14);
 	border-bottom-color: #ff3a17;
 }
-.form-v4-content .form-detail h2 {
-	color: #ff1c1c;
+.form-v4-content .form-detail {
+	color: #0a0606;
+	padding:  0 40px;
+
 }
-.form-v4-content .form-detail .form-group {
-	display: flex;
-	display: -webkit-flex;
-	margin:  0 -8px;
-}
-.form-v4-content .form-detail .form-row {
-	width: 100%;
-	position: relative;
-}
-.form-v4-content .form-detail .form-group .form-row.form-row-1 {
-	width: 50%;
-	padding: 0 8px;
-}
-.form-v4-content .form-detail label {
-	font-weight: 600;
-	font-size: 15px;
-	color: #666;
-	display: block;
-	margin-bottom: 8px;
-}
-.form-v4-content .form-detail .form-row label#valid {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    -o-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    background: #53c83c;
-}
-.form-v4-content .form-detail .form-row label#valid::after {
-	content: "";
-    position: absolute;
-    left: 5px;
-    top: 1px;
-    width: 3px;
-    height: 8px;
-    border: 1px solid #fff;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-.form-v4-content .form-detail .form-row label.error {
-	padding-left: 0;
-	margin-left: 0;
-    display: block;
-    position: absolute;
-    bottom: -5px;
+.form-v4-content .form-row {
     width: 100%;
-    background: none;
-    color: red;
+    position: relative;
 }
-.form-v4-content .form-detail .form-row label.error::after {
-    content: "\f343";
-    font-family: "LineAwesome";
-    position: absolute;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    right: 10px;
-    top: -31px;
-    color: red;
+.form-v4-content .form-row .form-row-inner {
+	position: relative;
+	width: 100%;
+}
+.form-v4-content .form-row .form-row-inner .label {
+	position: absolute;
+    top: -2px;
+    left: 10px;
     font-size: 18px;
-    font-weight: 900;
+    color: #070404;
+    font-weight: 400;
+    transform-origin: 0 0;
+    transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+}
+.form-v4-content .form-row .form-row-inner .border {
+	position: absolute;
+    bottom: 31px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #53c83c;
+    transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -webkit-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    -ms-transition: all .15s ease;
 }
 .form-v4-content .form-detail .input-text {
-	margin-bottom: 11px;
+	margin-bottom: 31px;
+}
+.form-v4-content .form-detail input {
+	width: 100%;
+    padding: 0px 10px 15px 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    background: transparent;
+    appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    -o-appearance: unset;
+    -ms-appearance: unset;
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+.form-v4-content .form-detail .form-row .input-text:focus{
+	border-bottom: 1px solid #53c83c;
+	background: transparent;
+}
+.form-v4-content .form-detail .form-row .input-text:focus + .label, 
+.form-v4-content .form-detail .form-row .input-text:valid + .label {
+	transform: translateY(-26px) scale(1);
+	-moz-transform: translateY(-26px) scale(1);
+    -webkit-transform: translateY(-26px) scale(1);
+    -o-transform: translateY(-26px) scale(1);
+    -ms-transform: translateY(-26px) scale(1);
+
+}
+.form-v4-content .form-detail .form-row .input-text:focus  + .border, 
+.form-v4-content .form-detail .form-row .input-text:valid  + .border {
+	transform: scaleX(1);
+	-moz-transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+
+}
+
+.form-v4-content .form-detail select{
+	width: 100%;
+    padding: 11.5px 15px 15px 15px;
+    border: 1px solid #e5e5e5;
+    background: transparent;
+    appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    -o-appearance: unset;
+    -ms-appearance: unset;
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
 }
 .form-v4-content .form-detail input {
 	width: 100%;
@@ -318,8 +355,55 @@ body {
 .form-v4-content .form-detail .form-row-last input {
 	padding: 12.5px;
 }
+.form-v4-content .form-detail .form-checkbox-b { /* this is for terms and con checkbox */
+	margin-top: px;
+	padding: 0 20px 0 60px;
+	position: relative;
 
+	
+}.form-v4-content .form-detail .form-checkbox-b input {
+	position: absolute;
+    opacity: 0;
+}
+.form-v4-content .form-detail .form-checkbox-b .checkmark { /*checkbox attributes */
+	position: absolute;
+    top: 10px;
+    left: 302px;
+    height: 20px;
+    width: 20px;
+    border: 3px solid #362e2e;
+    cursor: pointer;
+}
+.form-v4-content .form-detail .form-checkbox-b .checkmark::after { /*check properties (After)*/
+	content: "";
+    position: absolute;
+    left: 5px;
+   	top: 1px;
+    width: 6px;
+    height: 15px;
+    border: 1px solid rgb(224, 27, 27);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: none;
+}
+.form-v4-content .form-detail .form-checkbox-b input:checked ~ .checkmark::after {
+    display: block;
+}
+.form-v4-content .form-checkbox-b .form-text-con { /*properties for terms-con words*/
+	position: relative;
+	top: 10px;
+    margin-left: 280px;
+    color: #ff0e0e;
+    font-size: 17px;
+    font-weight: 400;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
+	
 
 /* Responsive */
 @media screen and (max-width: 991px) {
