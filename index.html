@@ -16,10 +16,13 @@
 <body class="form-v4">
 	<div class="page-content">
 		<div class="form-v4-content">
+
+
 			<div class="form-left">
 				<img src="images/form-v6.jpg" alt="form" height="600" width="280">
-			
 			</div>
+
+
 			<div class="form-right">
 				<div class="tab">
 					<div class="tab-inner">
@@ -38,47 +41,47 @@
 						<button class="tablinks" onclick="openCity(event, 'termscon')">Terms and Conditions</button>
 					</div>
 				</div>
-			<form class="form-detail" action="#" method="post" id="myform">
+
+
+
+			<form class="form-detail" action="#" method="post">
 				<div class="tabcontent" id="personal">
-					<div class="form-group">
-						<div class="form-row form-row-1">
-							<label for="first_name">First Name</label>
-						<input type="text" name="first_name" id="first_name" class="input-text">
-					    </div>
-					
-					<div class="form-row form-row-1">
-						<label for="last_name">Last Name</label>
-						<input type="text" name="last_name" id="last_name" class="input-text">
+					<div class="form-row">
+						<label class="form-row-inner">
+							<input type="text" name="full_name" id="full_name" class="input-text" required>
+							<span class="label">Username</span>
+							  <span class="border"></span>
+						</label>
 					</div>
-				</div>
-				<div class="form-group">
-			
-					<div class="form-row form-row-1">
-						<label for="student_number">Student Number</label>
-						<input type="number" name="student_number" id="student_number" class="input-text">
+					<div class="form-row">
+						<label class="form-row-inner">
+							<input type="text" name="your_email" id="your_email" class="input-text" required>
+							<span class="label">E-Mail</span>
+							  <span class="border"></span>
+						</label>
 					</div>
-					<div class="form-row form-row-1">
-						<label for="last_name">Year Level</label>
-						<input type="number" name="year_level" id="year_level" class="input-text">
+					<div class="form-row">
+						<label class="form-row-inner">
+							<input type="password" name="password" id="password" class="input-text" required>
+							<span class="label">Password</span>
+							<span class="border"></span>
+						</label>
 					</div>
-				</div>
-					
-				<div class="form-group">
-					<div class="form-row form-row-1">
-						<select name="Courses">
-							<option value="1">Courses</option>
-							<option value="2">BS Computer Engineering</option>
-							<option value="3">Other Programs</option>
-						  </select>
-						  <span class="select-btn">
-						 <i class="zmdi zmdi-chevron-down"></i>
-					     </span>
+					<div class="form-row">
+						<label class="form-row-inner">
+							<input type="password" name="comfirm_password" id="comfirm_password" class="input-text" required>
+							<span class="label">Comfirm Password</span>
+							<span class="border"></span>
+						</label>
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Register">
 					</div>
 				</div>
 			</form>
 			
 			
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="#" method="post" id="myform"> 
 				<div class="tabcontent" id="contact">
 					
 					</div>
@@ -97,11 +100,44 @@
 			</form>
 
 
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="#" method="post">
 				<div class="tabcontent" id="termscon">
-					
-					
-					</div>
+					<h5>1) You are solely responsible and liable for any activity occurring on your account, and
+					you must keep your account password secret. You must inform us immediately of any breach 
+					 of security or unauthorised use of your account by emailing us at
+					breach of security or unauthorised use of your account by emailing us at
+					itd@ue.edu.ph. We will investigate any security breaches and we have the right to suspend or terminate the account immediately. 
+					We will not be liable for any losses caused by the unauthorised use of your account, 
+					but you may be liable for our or other users' losses caused by such unauthorised use. </h5>
+
+					<h5>2) You agree not to upload, post on or transmit through the Website any computer viruses,
+						 macro viruses, Trojan horses, worms or anything else designed to interfere with,
+						  interrupt or disrupt the normal operating procedures of a computer. </h5>
+
+					<h5>3) You will not use the Website in any manner which violates or infringes the rights of any person,
+						 firm or company (including, but not limited to, intellectual property rights, 
+						 confidentiality rights and privacy rights).</h5>
+
+					<h5>4) You agree that our content, trademarks, copyright, patents, logos, domain names and other
+						 related intellectual property rights belong to us and/or our affiliates or licensors and
+						  you will not do any act that infringes those rights.</h5>
+
+					<h5>5)The student is expected and required to meet all admissions requirements before signing an enrollment agreement, 
+						meet all financial obligations within the enrollment agreement, and follow cancelation and 
+						withdrawal procedures as applicable. The school adheres to confidentiality policies and respects
+						 the student's rights and privacy.</h5>
+						 
+						 <div class="form-checkbox-b">
+							<label class="container">
+								  <input type="checkbox" name="checkbox">
+								  <span class="checkmark"></span>
+							</label>
+							<div class="form-text-con">
+							<h5>I do accept the Terms and Conditions </h5>
+							</div>
+						 </div>
+			
+				</div>
 			</form>
 	
 
