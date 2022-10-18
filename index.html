@@ -18,12 +18,12 @@
 		<div class="form-v4-content">
 
 
-			<div class="form-left">
+			<div class="form-left"> <!-- UE LOGO -->
 				<img src="images/form-v6.jpg" alt="form" height="600" width="280">
 			</div>
 
 
-			<div class="form-right">
+			<div class="form-right">  <!-- TABS -->
 				<div class="tab">
 					<div class="tab-inner">
 						<button class="tablinks" onclick="openCity(event, 'personal')" id="defaultOpen">Personal Info</button>
@@ -44,34 +44,47 @@
 
 
 
-			<form class="form-detail" action="#" method="post">
+			<form class="form-detail" action="#" method="post">  <!-- PERSONAL INFORMATION -->
 				<div class="tabcontent" id="personal">
-					<div class="form-row">
+					
+					<div class="form-row">  <!-- FIRST NAME -->
 						<label class="form-row-inner">
-							<input type="text" name="full_name" id="full_name" class="input-text" required>
-							<span class="label">Username</span>
+							<input type="text" name="firstname" id="first-name" class="input-text" required>
+							<span class="label">First Name</span>
 							  <span class="border"></span>
 						</label>
 					</div>
-					<div class="form-row">
+					<div class="form-row">  <!-- LAST NAME -->
 						<label class="form-row-inner">
-							<input type="text" name="your_email" id="your_email" class="input-text" required>
-							<span class="label">E-Mail</span>
+							<input type="text" name="surname" id="surname" class="input-text" required>
+							<span class="label">Surname</span>
 							  <span class="border"></span>
 						</label>
 					</div>
-					<div class="form-row">
+					<div class="form-row">  <!-- Student Number -->
 						<label class="form-row-inner">
-							<input type="password" name="password" id="password" class="input-text" required>
-							<span class="label">Password</span>
+							<input type="number" name="stud-no" id="stud-no" class="input-text" required>
+							<span class="label">Student Number</span>
 							<span class="border"></span>
 						</label>
 					</div>
-					<div class="form-row">
+					<div class="form-row">  <!-- Year Level -->
 						<label class="form-row-inner">
-							<input type="password" name="comfirm_password" id="comfirm_password" class="input-text" required>
-							<span class="label">Comfirm Password</span>
+							<input type="number" name="year-level" id="year-level" class="input-text" required>
+							<span class="label">Current Year Level</span>
 							<span class="border"></span>
+						</label>
+					</div>
+					<div class="form-row">  <!-- Course -->
+						<label class="form-row-inner">
+							<select name="course">
+								<option value="course">Course</option>
+								<option value="Street">BS Computer Engineering</option>
+								<option value="District">Others</option>
+			                </select>
+							<span class="select-btn">
+								<i class="zmdi zmdi-chevron-down"></i>
+						  </span>
 						</label>
 					</div>
 				
@@ -166,6 +179,6 @@
 		document.getElementById("defaultOpen").click();
 	</script>
 	
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>
 						
