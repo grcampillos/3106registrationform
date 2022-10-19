@@ -160,40 +160,27 @@
 	
 			<form class="form-detail" action="#" method="post" id="myform"> <!-- MEMBERSHIP TYPE -->
 				<div class="tabcontent" id="membership">
-					<div class="tabcontent" id="emergency">
-						<div class="form-row">  <!-- Full Name -->
-							<label class="form-row-inner">
-								<input type="text" name="firstname" id="first-name" class="input-text" required>
-								<span class="label">Full Name</span>
-								  <span class="border"></span>
-							</label>
-						</div>
-						<div class="form-row">  <!-- Relationship -->
-							<label class="form-row-inner">
-								<input type="text" name="surname" id="surname" class="input-text" required>
-								<span class="label">Relationship</span>
-								  <span class="border"></span>
-							</label>
-						</div>
-						<div class="form-row">  <!-- Contact Number -->
-							<label class="form-row-inner">
-								<input type="text" name="surname" id="surname" class="input-text" required>
-								<span class="label">Contact Number</span>
-								  <span class="border"></span>
-							</label>
-						</div>
-						<div class="form-row">  <!-- Home Address -->
-							<label class="form-row-inner">
-								<input type="text" name="surname" id="surname" class="input-text" required>
-								<span class="label">Home Address</span>
-								  <span class="border"></span>
-							</label>
-						</div>
-					
+					<div class="form-row">  
+						<h2>Proof of Payment</h2>
+						<label class="form-row-inner">
+							<select name="type">
+							<option value="type">Type</option>
+							<option value="new">New</option>
+							<option value="renewal">Renewal</option>
+							<option value="honorary">Honorary</option>
+						</select>
+						<span class="select-btn">
+							<i class="zmdi zmdi-chevron-down"></i>
+					    </span>
+                                       
+					    </label>
+
+                       
+						<label class="form-label" for="customFile"></label>
+                        <input type="file" class="form-control" id="customFile" />
 					</div>
 				</div>
 			</form>
-
 
 			<form class="form-detail" action="#" method="post">
 				<div class="tabcontent" id="termscon">
