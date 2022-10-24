@@ -32,9 +32,6 @@
 						<button class="tablinks" onclick="openCity(event, 'contact')">Contact Info</button>
 					</div>
 					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'social')">Social Media</button>
-					</div>
-					<div class="tab-inner">
 						<button class="tablinks" onclick="openCity(event, 'emergency')">Emergency</button>
 					</div>
 					<div class="tab-inner">
@@ -52,7 +49,7 @@
 					
 					<div class="form-row">  <!-- FIRST NAME -->
 						<label class="form-row-inner">
-							<input type="text" name="firstname" id="first-name" class="input-text" required>
+							<input type="text" name="firstname" id="firstname" onkeyup = Validate(this) class="input-text" required >
 							<span class="label">First Name</span>
 							  <span class="border"></span>
 						</label>
@@ -99,88 +96,61 @@
 				<div class="tabcontent" id="contact">
 					<div class="form-row">  <!-- UE Email -->
 						<label class="form-row-inner">
-							<input type="text" name="school" id="school" class="input-text" required>
+							<input type="text" name="firstname" id="email" class="input-text" required onchange="email_validate(this.value)">
 							<span class="label">UE Email</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Personal Email -->
 						<label class="form-row-inner">
-							<input type="text" name="personal" id="personal" class="input-text" required>
+							<input type="text" name="surname" id="surname" class="input-text" required>
 							<span class="label">Personal Email</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Contact Number -->
 						<label class="form-row-inner">
-							<input type="text" name="cont" id="cont" class="input-text" required>
+							<input type="text" name="surname" id="surname" class="input-text" required>
 							<span class="label">Contact Number</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Home Address -->
 						<label class="form-row-inner">
-							<input type="text" name="address" id="address" class="input-text" required>
+							<input type="text" name="surname" id="surname" class="input-text" required>
 							<span class="label">Home Address</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 				</div>
 			</form>
-
-			<form class="form-detail" action="#" method="post">  <!-- SOCIAL MEDIA -->
-				<div class="tabcontent" id="social">
-					<div class="form-row">  <!-- Facebook -->
-						<label class="form-row-inner">
-							<input type="text" name="facebook" id="facebook" class="input-text" required>
-							<span class="label">Facebook</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Instagram -->
-						<label class="form-row-inner">
-							<input type="text" name="instagram" id="instagram" class="input-text" required>
-							<span class="label">Instagram</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Twitter -->
-						<label class="form-row-inner">
-							<input type="text" name="twitter" id="twitter" class="input-text" required>
-							<span class="label">Twitter</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-				</div>
-
-				</form>
 	
 			<form class="form-detail" action="#" method="post" id="myform"> <!-- IN CASE OF EMERGENCY -->
 				<div class="tabcontent" id="emergency">
 					<div class="form-row">  <!-- Full Name -->
 						<label class="form-row-inner">
-							<input type="text" name="fullname" id="fullname" class="input-text" required>
+							<input type="text" name="firstname" id="first-name" class="input-text" required>
 							<span class="label">Full Name</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Relationship -->
 						<label class="form-row-inner">
-							<input type="text" name="relationship" id="relationship" class="input-text" required>
+							<input type="text" name="surname" id="surname" class="input-text" required>
 							<span class="label">Relationship</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Contact Number -->
 						<label class="form-row-inner">
-							<input type="text" name="number" id="number" class="input-text" required>
+							<input type="text" name="surname" id="surname" class="input-text" required>
 							<span class="label">Contact Number</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Home Address -->
 						<label class="form-row-inner">
-							<input type="text" name="home" id="home" class="input-text" required>
+							<input type="text" name="surname" id="surname" class="input-text" required>
 							<span class="label">Home Address</span>
 							  <span class="border"></span>
 						</label>
@@ -194,21 +164,23 @@
 						<h2>Proof of Payment</h2>
 						<label class="form-row-inner">
 							<select name="type">
-								<option value="type">Type</option>
-								<option value="new">New</option>
-								<option value="renewal">Renewal</option>
-								<option value="honorary">Honorary</option>
-							</select>
-							<span class="select-btn">
-								<i class="zmdi zmdi-chevron-down"></i>
-					    	</span>                                      
+							<option value="type">Type</option>
+							<option value="new">New</option>
+							<option value="renewal">Renewal</option>
+							<option value="honorary">Honorary</option>
+						</select>
+						<span class="select-btn">
+							<i class="zmdi zmdi-chevron-down"></i>
+					    </span>
+                                       
 					    </label>
+
+                       
 						<label class="form-label" for="customFile"></label>
                         <input type="file" class="form-control" id="customFile" />
 					</div>
 				</div>
 			</form>
-
 
 			<form class="form-detail" action="#" method="post">
 				<div class="tabcontent" id="termscon">
@@ -237,7 +209,7 @@
 						 
 						 <div class="form-checkbox-b">
 							<label class="container">
-								  <input type="checkbox" name="checkbox">
+								  <input type="checkbox" name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">
 								  <span class="checkmark"></span>
 							</label>
 							<div class="form-text-con">
@@ -275,8 +247,17 @@
 
 		// Get the element with id="defaultOpen" and click on it
 		document.getElementById("defaultOpen").click();
+
+		// FOR TERMS
+		document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+
+		
+		
+
+		
 	</script>
 	
 </body>
 </html>
+						
 						
