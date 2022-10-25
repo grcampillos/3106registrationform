@@ -63,14 +63,14 @@
 					</div>
 					<div class="form-row">  <!-- Student Number -->
 						<label class="form-row-inner">
-							<input type="number" name="stud-no" id="stud-no" class="input-text" required>
+							<input type="number" name="stud-no" id="stud_no" class="input-text" required>
 							<span class="label">Student Number</span>
 							<span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Year Level -->
 						<label class="form-row-inner">
-							<input type="number" name="year-level" id="year-level" class="input-text" required>
+							<input type="number" name="year-level" id="year_level" class="input-text" required>
 							<span class="label">Current Year Level</span>
 							<span class="border"></span>
 						</label>
@@ -87,6 +87,11 @@
 						  </span>
 						</label>
 					</div>
+					<div class="form-row">  <!-- NEXT BUTTON -->
+						<div class="form-next">
+							<input type="submit" name="next" class="next" value="Next">
+						</div>
+						</div>
 				
 				</div>
 			</form>
@@ -96,32 +101,37 @@
 				<div class="tabcontent" id="contact">
 					<div class="form-row">  <!-- UE Email -->
 						<label class="form-row-inner">
-							<input type="text" name="firstname" id="email" class="input-text" required onchange="email_validate(this.value)">
+							<input type="text" name="ueMail" id="ueMail" class="input-text" required onchange="email_validate(this.value)">
 							<span class="label">UE Email</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Personal Email -->
 						<label class="form-row-inner">
-							<input type="text" name="surname" id="surname" class="input-text" required>
+							<input type="text" name="emailB" id="emailB" class="input-text" required onchange="email_validate(this.value)">
 							<span class="label">Personal Email</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Contact Number -->
 						<label class="form-row-inner">
-							<input type="text" name="surname" id="surname" class="input-text" required>
+							<input type="number" name="contact" id="contactno" class="input-text" required">
 							<span class="label">Contact Number</span>
 							  <span class="border"></span>
 						</label>
 					</div>
 					<div class="form-row">  <!-- Home Address -->
 						<label class="form-row-inner">
-							<input type="text" name="surname" id="surname" class="input-text" required>
+							<input type="text" name="address" id="address" class="input-text" required>
 							<span class="label">Home Address</span>
 							  <span class="border"></span>
 						</label>
 					</div>
+					<div class="form-row">  <!-- NEXT BUTTON -->
+						<div class="form-next">
+							<input type="submit" name="next" class="next" value="Next">
+						</div>
+						</div>
 				</div>
 			</form>
 	
@@ -143,7 +153,7 @@
 					</div>
 					<div class="form-row">  <!-- Contact Number -->
 						<label class="form-row-inner">
-							<input type="text" name="surname" id="surname" class="input-text" required>
+							<input type="number" name="surname" id="surname" class="input-text" required>
 							<span class="label">Contact Number</span>
 							  <span class="border"></span>
 						</label>
@@ -245,6 +255,8 @@
 		    evt.currentTarget.className += " active";
 		}
 
+		
+
 		// Get the element with id="defaultOpen" and click on it
 		document.getElementById("defaultOpen").click();
 
@@ -252,11 +264,16 @@
 		document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
 
 		
+		  	
+	
+
+
+		
 		
 
 		
 	</script>
-	
+	<script src="main.js"></script>
 </body>
 </html>
 						
