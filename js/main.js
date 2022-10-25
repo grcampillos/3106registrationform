@@ -1,73 +1,55 @@
-function Validate(firstname){ /*VALIDATION FOR FIRST NAME*/
-			firstname.value = firstname.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
-
-
-}
-
-//CONTACT INFO
-function email_validate(ueemail)
-{
-var ueMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
-
-    if(regMail.value.match(ueMail))
-    {
-    document.getElementById("status").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
-    }
-    else
-    {
-        document.getElementById("status").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
-    }
-}
-
-
-            
-/*
-
-
-    
-function validatephone(phone) 
-{
-    var maintainplus = '';
-    var numval = phone.value
-    if ( numval.charAt(0)=='+' )
-    {
-        var maintainplus = '';
-    }
-    curphonevar = numval.replace(/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g,'');
-    phone.value = maintainplus + curphonevar;
-    var maintainplus = '';
-    phone.focus;
-}
-// validates text only
-function Validate(txt) {
-    txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
-}
-// validate email
-
-// validate date of birth
-function dob_validate(dob)
-{
-var regDOB = /^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$/;
-
-    if(regDOB.test(dob) == false)
-    {
-    document.getElementById("statusDOB").innerHTML	= "<span class='warning'>DOB is only used to verify your age.</span>";
-    }
-    else
-    {
-    document.getElementById("statusDOB").innerHTML	= "<span class='valid'>Thanks, you have entered a valid DOB!</span>";	
-    }
-}
-// validate address
-function add_validate(address)
-{
-var regAdd = /^(?=.*\d)[a-zA-Z\s\d\/]+$/;
-  
-    if(regAdd.test(address) == false)
-    {
-    document.getElementById("statusAdd").innerHTML	= "<span class='warning'>Address is not valid yet.</span>";
-    }
-    else
-    {
-    document.getElementById("statusAdd").innerHTML	= "<span class='valid'>Thanks, Address looks valid!</span>";	
-    }*/
+$(function(){
+	$("#wizard").steps({
+        headerTag: "h4",
+        bodyTag: "section",
+        transitionEffect: "fade",
+        enableAllSteps: true,
+        transitionEffectSpeed: 300,
+        labels: {
+            next: "Next",
+            previous: "Back"
+        },
+        onStepChanging: function (event, currentIndex, newIndex) { 
+            if ( newIndex === 1 ) {
+                $('.steps').addClass('step-2');
+            } else {
+                $('.steps').removeClass('step-2');
+            }
+            if ( newIndex === 2 ) {
+                $('.steps').addClass('step-3');
+            } else {
+                $('.steps').removeClass('step-3');
+            }
+            return true; 
+        }
+    });
+    // Custom Jquery Steps
+    $('.forward').click(function(){
+    	$("#wizard").steps('next');
+    })
+    $('.backward').click(function(){
+        $("#wizard").steps('previous');
+    })
+    // Select
+    $('html').click(function() {
+        $('.select .dropdown').hide(); 
+    });
+    $('.select').click(function(event){
+        event.stopPropagation();
+    });
+    $('.select .select-control').click(function(){
+        $(this).parent().next().toggle().toggleClass('active');
+    })
+    $('.select .dropdown li').click(function(){
+        $(this).parent().toggle();
+        var text = $(this).attr('rel');
+        $(this).parent().prev().find('div').text(text);
+    })
+    // Payment
+    $('.payment-block .payment-item').click(function(){
+        $('.payment-block .payment-item').removeClass('active');
+        $(this).addClass('active');
+    })
+    // Date Picker
+    var dp1 = $('#dp1').datepicker().data('datepicker');
+})
