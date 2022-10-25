@@ -1,223 +1,170 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>UE Registration Form</title>
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Font-->
-	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
-	<!-- Jquery -->
-	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body class="form-v4">
-	<div class="page-content">
-		<div class="form-v4-content">
+	<head>
+		<meta charset="utf-8">
+		<title>FormWizard_v10</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
 
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
 
-			<div class="form-left"> <!-- UE LOGO -->
-				<img src="images/form-v6.jpg" alt="form" height="600" width="280">
-			</div>
+		<!-- DATE-PICKER -->
+		<link rel="stylesheet" href="vendor/date-picker/css/datepicker.min.css">
 
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+            <form action="" id="wizard">
+        		<!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                    <div class="inner">
+                    	<a href="#" class="avartar">
+                    		<img src="images/ue_logo.jpg" alt="form" height="100" width="100">
+                    	</a>
+                    	<div class="form-row form-group">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="First Name">
+                    		</div>
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Middle Name">
+                    		</div>
+                    	</div>
+                        <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Last Name">
+                                
+                    		</div>
+                    	</div>
+                    	<div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="number" class="form-control" placeholder="Student Number">
+                    			
+                    		</div>
+                    	</div>
+                    	
+                        <div class="form-row">
+                            <div class="select">
+                                <div class="form-holder">
+                                    <div class="select-control">Year Level</div>
+                                    <i class="zmdi zmdi-caret-down small"></i>
+                                </div>
+                                <ul class="dropdown">
+                                    <li rel="One">One</li>
+                                    <li rel="Two">Two</li>
+                                    <li rel="Three">Three</li>
+                                    <li rel="Four">Four</li>
+                                </ul>
+                            </div>
+	                	</div>
+                    	<div class="form-row">
+                            <div class="select">
+                                <div class="form-holder">
+                                    <div class="select-control">Course</div>
+                                    <i class="zmdi zmdi-caret-down small"></i>
+                                </div>
+                                <ul class="dropdown">
+                                    <li rel="bsCPE">BS Computer Engineering</li>
+                                    <li rel="Two">Others</li>
+                                    
+                                </ul>
+                            </div>
+	                	</div>
+                        <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Personal Email">
+                    			<i class="zmdi zmdi-email small"></i>
+                    		</div>
+                    	</div>
+                        <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="UE Email">
+                    			<i class="zmdi zmdi-email small"></i>
+                    		</div>
+                    	</div>
+                    	
+                    	
+                    </div>
+                </section>
+                
+				<!-- SECTION 2 -->
+                <h4></h4>
+                <section>
+                	<div class="inner">
+                		<a href="#" class="avartar">
+                    		<img src="images/ue_logo.jpg" alt="form" height="100" width="100">
+                    	</a>
+                		
+                        
+                        <div class="form-row">
+                            <div class="form-holder">
+                                <input type="number" class="form-control" placeholder="Contact Number">
+                            </div>
+                        </div>
 
-			<div class="form-right">  <!-- TABS -->
-				<div class="tab">
-					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'personal')" id="defaultOpen">Personal Info</button>
-					</div>
-					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'contact')">Contact Info</button>
-					</div>
-					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'emergency')">Emergency</button>
-					</div>
-					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'membership')">Membership</button>
-					</div>
-					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'termscon')">Terms and Conditions</button>
-					</div>
-				</div>
+                        <div class="form-row">
+                            <div class="form-holder">
+                                <input type="text" class="form-control" placeholder="Home Address">
+                            </div>
+                        </div>
 
+                        <div class="form-row">
+                            <div class="form-holder">
+                                <input type="text" class="form-control" placeholder="Provincial Address">
+                            </div>
+                        </div>
 
+                        <div class="form-row form-group">
+                            <div class="form-holder">
+                                <input type="text" class="form-control" placeholder="Twitter">
+                                <i class="zmdi zmdi-twitter small"></i>
+                            </div>
+                            <div class="form-holder">
+                                <input type="text" class="form-control" placeholder="Instagram">
+                                <i class="zmdi zmdi-instagram small"></i>
+                            </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="form-holder">
+                                <input type="text" class="form-control" placeholder="Facebook">
+                                <i class="zmdi zmdi-facebook small"></i>
+                            </div>
+                            <div class="form-holder">
+                                <input type="text" class="form-control" placeholder="Google">
+                                <i class="zmdi zmdi-google small"></i>
+                            </div>
+                        </div>
+                	</div>
+                </section>
 
-			<form class="form-detail" action="#" method="post">  <!-- PERSONAL INFORMATION -->
-				<div class="tabcontent" id="personal">
-					
-					<div class="form-row">  <!-- FIRST NAME -->
-						<label class="form-row-inner">
-							<input type="text" name="firstname" id="firstname" onkeyup = Validate(this) class="input-text" required >
-							<span class="label">First Name</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- LAST NAME -->
-						<label class="form-row-inner">
-							<input type="text" name="surname" id="surname" class="input-text" required>
-							<span class="label">Surname</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Student Number -->
-						<label class="form-row-inner">
-							<input type="number" name="stud-no" id="stud_no" class="input-text" required>
-							<span class="label">Student Number</span>
-							<span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Year Level -->
-						<label class="form-row-inner">
-							<input type="number" name="year-level" id="year_level" class="input-text" required>
-							<span class="label">Current Year Level</span>
-							<span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Course -->
-						<label class="form-row-inner">
-							<select name="course">
-								<option value="course">Course</option>
-								<option value="Street">BS Computer Engineering</option>
-								<option value="District">Others</option>
-			                </select>
-							<span class="select-btn">
-								<i class="zmdi zmdi-chevron-down"></i>
-						  </span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- NEXT BUTTON -->
-						<div class="form-next">
-							<input type="submit" name="next" class="next" value="Next">
-						</div>
-						</div>
-				
-				</div>
-			</form>
-			
-			
-			<form class="form-detail" action="#" method="post" id="myform">  <!-- CONTACT INFORMATION -->
-				<div class="tabcontent" id="contact">
-					<div class="form-row">  <!-- UE Email -->
-						<label class="form-row-inner">
-							<input type="text" name="ueMail" id="ueMail" class="input-text" required onchange="email_validate(this.value)">
-							<span class="label">UE Email</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Personal Email -->
-						<label class="form-row-inner">
-							<input type="text" name="emailB" id="emailB" class="input-text" required onchange="email_validate(this.value)">
-							<span class="label">Personal Email</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Contact Number -->
-						<label class="form-row-inner">
-							<input type="number" name="contact" id="contactno" class="input-text" required">
-							<span class="label">Contact Number</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Home Address -->
-						<label class="form-row-inner">
-							<input type="text" name="address" id="address" class="input-text" required>
-							<span class="label">Home Address</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- NEXT BUTTON -->
-						<div class="form-next">
-							<input type="submit" name="next" class="next" value="Next">
-						</div>
-						</div>
-				</div>
-			</form>
-	
-			<form class="form-detail" action="#" method="post" id="myform"> <!-- IN CASE OF EMERGENCY -->
-				<div class="tabcontent" id="emergency">
-					<div class="form-row">  <!-- Full Name -->
-						<label class="form-row-inner">
-							<input type="text" name="firstname" id="first-name" class="input-text" required>
-							<span class="label">Full Name</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Relationship -->
-						<label class="form-row-inner">
-							<input type="text" name="surname" id="surname" class="input-text" required>
-							<span class="label">Relationship</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Contact Number -->
-						<label class="form-row-inner">
-							<input type="number" name="surname" id="surname" class="input-text" required>
-							<span class="label">Contact Number</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-					<div class="form-row">  <!-- Home Address -->
-						<label class="form-row-inner">
-							<input type="text" name="surname" id="surname" class="input-text" required>
-							<span class="label">Home Address</span>
-							  <span class="border"></span>
-						</label>
-					</div>
-				</div>
-			</form>
-	
-			<form class="form-detail" action="#" method="post" id="myform"> <!-- MEMBERSHIP TYPE -->
-				<div class="tabcontent" id="membership">
-					<div class="form-row">  
-						<h2>Proof of Payment</h2>
-						<label class="form-row-inner">
-							<select name="type">
-							<option value="type">Type</option>
-							<option value="new">New</option>
-							<option value="renewal">Renewal</option>
-							<option value="honorary">Honorary</option>
-						</select>
-						<span class="select-btn">
-							<i class="zmdi zmdi-chevron-down"></i>
-					    </span>
-                                       
-					    </label>
-
-                       
-						<label class="form-label" for="customFile"></label>
-                        <input type="file" class="form-control" id="customFile" />
-					</div>
-				</div>
-			</form>
-
-			<form class="form-detail" action="#" method="post">
-				<div class="tabcontent" id="termscon">
-					<h5>1) You are solely responsible and liable for any activity occurring on your account, and
-					you must keep your account password secret. You must inform us immediately of any breach 
-					 of security or unauthorised use of your account by emailing us at
-					breach of security or unauthorised use of your account by emailing us at
-					itd@ue.edu.ph. We will investigate any security breaches.</h5>
-
-					<h5>2) You agree not to upload, post on or transmit through the Website any computer viruses,
-						 macro viruses, Trojan horses, worms or anything else designed to interfere with,
-						  interrupt or disrupt the normal operating procedures of a computer. </h5>
-
-					<h5>3) You will not use the Website in any manner which violates or infringes the rights of any person,
-						 firm or company (including, but not limited to, intellectual property rights, 
-						 confidentiality rights and privacy rights).</h5>
-
-					<h5>4) You agree that our content, trademarks, copyright, patents, logos, domain names and other
-						 related intellectual property rights belong to us and/or our affiliates or licensors and
-						  you will not do any act that infringes those rights.</h5>
-
-					<h5>5)The student is expected and required to meet all admissions requirements before signing an enrollment agreement, 
-						meet all financial obligations within the enrollment agreement, and follow cancelation and 
-						withdrawal procedures as applicable. The school adheres to confidentiality policies and respects
-						 the student's rights and privacy.</h5>
-						 
-						 <div class="form-checkbox-b">
+                <!-- SECTION 3 -->
+                <h4></h4>
+                <section class="section-3">
+                    <div class="inner">
+                      
+                        <h6>Terms and Conditions</h6>
+                        <div class="form-row">
+                            <h5>1) You are solely responsible and liable for any activity occurring on your account, and
+                                you must keep your account password secret. You must inform us immediately of any breach 
+                                 of security or unauthorised use of your account by emailing us at
+                                breach of security or unauthorised use of your account by emailing us at
+                                itd@ue.edu.ph. We will investigate any security breaches.</h5>
+            
+                        <br>
+            
+                                <h5>2) You agree that our content, trademarks, copyright, patents, logos, domain names and other
+                                     related intellectual property rights belong to us and/or our affiliates or licensors and
+                                      you will not do any act that infringes those rights.</h5> </br>
+            
+                                <h5>3)The student is expected and required to meet all admissions requirements before signing an enrollment agreement, 
+                                    meet all financial obligations within the enrollment agreement, and follow cancelation and 
+                                    withdrawal procedures as applicable. The school adheres to confidentiality policies and respects
+                                     the student's rights and privacy.</h5>
+                        </div>
+                        <div class="form-checkbox-b">
 							<label class="container">
 								  <input type="checkbox" name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">
 								  <span class="checkmark"></span>
@@ -226,55 +173,23 @@
 							<h5>I do accept the Terms and Conditions </h5>
 							</div>
 						 </div>
-						 <div class="form-register">
-							<input type="submit" name="register" class="register" value="Register">
-						</div>
-			
-				</div>
-			</form>
-	
-
-
-
-
-	
+						 
+                    </div>
+                </section>
+            </form>
 		</div>
-	</div>
-	<script type="text/javascript">
-		function openCity(evt, cityName) {
-		    var i, tabcontent, tablinks;
-		    tabcontent = document.getElementsByClassName("tabcontent");
-		    for (i = 0; i < tabcontent.length; i++) {
-		        tabcontent[i].style.display = "none";
-		    }
-		    tablinks = document.getElementsByClassName("tablinks");
-		    for (i = 0; i < tablinks.length; i++) {
-		        tablinks[i].className = tablinks[i].className.replace(" active", "");
-		    }
-		    document.getElementById(cityName).style.display = "block";
-		    evt.currentTarget.className += " active";
-		}
 
+		<script src="js/jquery-3.3.1.min.js"></script>
 		
+		<!-- JQUERY STEP -->
+		<script src="js/jquery.steps.js"></script>
 
-		// Get the element with id="defaultOpen" and click on it
-		document.getElementById("defaultOpen").click();
+		<!-- DATE-PICKER -->
+		<script src="vendor/date-picker/js/datepicker.js"></script>
+		<script src="vendor/date-picker/js/datepicker.en.js"></script>
 
-		// FOR TERMS
-		document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+		<script src="js/main.js"></script>
 
-		
-		  	
-	
-
-
-		
-		
-
-		
-	</script>
-	<script src="main.js"></script>
+<!-- Template created and distributed by Colorlib -->
 </body>
 </html>
-						
-						
