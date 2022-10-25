@@ -18,7 +18,7 @@
 	</head>
 	<body onload="document.registration.userid.focus();">
 		<div class="wrapper">
-            <form action="" id="wizard">
+            <form action="" id="wizard" onsubmit="return regValidation()">
         		<!-- SECTION 1 -->
                 <h4></h4>
                 <section>
@@ -41,7 +41,7 @@
                     	</div>
                     	<div class="form-row">
                     		<div class="form-holder">
-                    			<input type="number" class="form-control" name="studnumber" id="studnumber" placeholder="Student Number">
+                    			<input type="text" class="form-control" name="studnumber" id="studnumber" placeholder="Student Number">
                     		</div>
                     	</div>
                     	
@@ -86,6 +86,7 @@
                     			<i class="zmdi zmdi-email small"></i>
                     		</div>
                     	</div>
+                       
                     	
                     	
                     </div>
@@ -172,6 +173,7 @@
 							</label>
 							<div class="form-text-con">
 							<h5>I do accept the Terms and Conditions </h5>
+                        
 							</div>
 						 </div>
 						 
@@ -179,6 +181,7 @@
                 </section>
             </form>
 		</div>
+
 
 		<script src="js/jquery-3.3.1.min.js"></script>
 		

@@ -1,14 +1,25 @@
-function formValidation() {
-    var uid = document.registration.userid;
+function regValidation() {
+    var fname = document.registration.fname;
+    var mname = document.registration.mname;
+    var lname = document.registration.lname;
+    var studnumber = document.registration.studnumber;
+
+
     var passid = document.registration.passid;
-    var uname = document.registration.username;
     var uadd = document.registration.address;
     var ucountry = document.registration.country;
     var uzip = document.registration.zip;
     var uemail = document.registration.email;
-    var umsex = document.registration.sex;
 
-
+    // Fucntion to check uid (min of 5 to max of 12)
+    if (userid_validation(uid, 5, 12)) {
+        if (passid_validation(passid, 5, 12)){
+            if (allLetter(uname)) {
+                alert("Name is OK")
+            }
+        }    
+    }
+    
 
     
 function userid_validation(uid,mx,my)
@@ -34,9 +45,15 @@ function passid_validation(passid,mx,my)
     return true;
 }
 
-function allLetter(uname){ 
+function allLetter(fname, mname ,lname){ 
 var letters = /^[A-Za-z]+$/;
-    if(uname.value.match(letters)){
+    if(fname.value.match(letters)){
+        return true;
+    }
+    if(mname.value.match(letters)){
+        return true;
+    }
+    if(lname.value.match(letters)){
         return true;
     }
     else{
