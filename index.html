@@ -14,155 +14,231 @@
 
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/style.css">
-        <script src="reg_validation.js"></script>
 	</head>
-	<body onload="document.registration.userid.focus();">
+	<body>
+        <div class="fortabs">
+            <div class="tab">
+                <div class="tab-inner">
+                    <button class="tablinks" onclick="openCity(event, 'personal')" id="defaultOpen">Personal Info</button>
+                </div>
+                <div class="tab-inner">
+                    <button class="tablinks" onclick="openCity(event, 'contact')">Contact Info</button>
+                </div>
+                
+                <div class="tab-inner">
+                    <button class="tablinks" onclick="openCity(event, 'membership')">Membership</button>
+                </div>
+                <div class="tab-inner">
+                    <button class="tablinks" onclick="openCity(event, 'termscon')">Terms and Conditions</button>
+                </div>
+            </div>
+        </div>
+
 		<div class="wrapper">
-            <form action="" id="wizard" onsubmit="return regValidation()">
+            <form action="" id="wizard">
+              
+
+              
+                
         		<!-- SECTION 1 -->
-                <h4></h4>
-                <section>
-                    <div class="inner">
+               
+                
+                    <div class="regform">
                     	<a href="#" class="avartar">
                     		<img src="images/ue_logo.jpg" alt="form" height="100" width="100">
                     	</a>
-                    	<div class="form-row form-group">
-                    		<div class="form-holder">
-                    			<input type="text" class="form-control" name="fname" id="fname" placeholder="First Name">
-                    		</div>
-                    		<div class="form-holder">
-                    			<input type="text" class="form-control" name="mname" id="mname" placeholder="Middle Name">
-                    		</div>
-                    	</div>
-                        <div class="form-row">
-                    		<div class="form-holder">
-                    			<input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name">
-                    		</div>
-                    	</div>
-                    	<div class="form-row">
-                    		<div class="form-holder">
-                    			<input type="text" class="form-control" name="studnumber" id="studnumber" placeholder="Student Number">
-                    		</div>
-                    	</div>
-                    	
-                        <div class="form-row">
-                            <div class="select">
-                                <div class="form-holder">
-                                    <div class="select-control">Year Level</div>
-                                    <i class="zmdi zmdi-caret-down small"></i>
-                                </div>
-                                <ul class="dropdown">
-                                    <li rel="1st Year">1st Year</li>
-                                    <li rel="2nd Year">2nd Year</li>
-                                    <li rel="3rd Year">3rd Year</li>
-                                    <li rel="4th Year">4th Year</li>
-                                </ul>
-                            </div>
-	                	</div>
-                    	<div class="form-row">
-                            <div class="select">
-                                <div class="form-holder">
-                                    <div class="select-control">Course</div>
-                                    <i class="zmdi zmdi-caret-down small"></i>
-                                </div>
-                                <ul class="dropdown">
-                                    <li rel="BS CPE">BS Computer Engineering</li>
-                                    <li rel="BS CE">BS Civil Engineering</li>
-                                    <li rel="BS ME">BS Mechanical Engineering</li>
-                                    <li rel="Others">Others</li>
-                                    
-                                </ul>
-                            </div>
-	                	</div>
-                        <div class="form-row">
-                    		<div class="form-holder">
-                    			<input type="text" class="form-control" name="peremail" id="peremail" placeholder="Personal Email">
-                    			<i class="zmdi zmdi-email small"></i>
-                    		</div>
-                    	</div>
-                        <div class="form-row">
-                    		<div class="form-holder">
-                    			<input type="text" class="form-control" name="ueemail" id="ueemail" placeholder="UE Email">
-                    			<i class="zmdi zmdi-email small"></i>
-                    		</div>
-                    	</div>
-                       
-                    	
-                    	
-                    </div>
-                </section>
-                
-				<!-- SECTION 2 -->
-                <h4></h4>
-                <section>
-                	<div class="inner">
-                		<a href="#" class="avartar">
-                    		<img src="images/ue_logo.jpg" alt="form" height="100" width="100">
-                    	</a>
-                		
                         
-                        <div class="form-row">
-                            <div class="form-holder">
-                                <input type="number" class="form-control" name="contnumber" id="contnumber" placeholder="Contact Number">
-                            </div>
-                        </div>
 
-                        <div class="form-row">
-                            <div class="form-holder">
-                                <input type="text" class="form-control" name="homeadd" id="homeadd" placeholder="Home Address">
-                            </div>
-                        </div>
+                            <!-- PERSONAL INFORMATION -->
+                                <div class="tabcontent" id="personal">
 
-                        <div class="form-row">
-                            <div class="form-holder">
-                                <input type="text" class="form-control" name="provadd" id="provadd" placeholder="Provincial Address">
-                            </div>
-                        </div>
 
+                                    <div class="form-row form-group">
+                                        <div class="form-holder">
+                                            <input type="text" class="form-control" placeholder="First Name" id="fname" onkeyup = "Validate(this)" required >
+                                        </div>
+                                        <div class="form-holder">
+                                            <input type="text" class="form-control" placeholder="Middle Name" id="mname" onkeyup = "Validate(this)" required >
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-holder">
+                                            <input type="text" class="form-control" placeholder="Last Name" id="lname" onkeyup = "Validate(this)" required >
+                                        </div>
+                                    </div>
+                                
+                                <div class="form-row">
+                                    <div class="select">
+                                        <div class="form-holder">
+                                            <select name="yearlevel">
+                                                <option value="yearlevel">Yeal Level</option>
+                                                <option value="two">First Year</option>
+                                                <option value="two">Second Year</option>
+                                                <option value="three">Third Year</option>
+                                                <option value="four">Fourth Year</option>
+                                            </select> <i class="zmdi zmdi-caret-down small"></i>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="select">
+                                        <div class="form-holder">
+                                            
+                                            <select name="course">
+                                                <option value="course">Course</option>
+                                                <option value="cpe">BS Computer Engineering</option>
+                                                <option value="others">Others</option>
+                                            </select>
+                                            <i class="zmdi zmdi-caret-down small"></i>
+                                        </div>
+                                        
+                                            
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" class="form-control" placeholder="Personal Email" id="pemail" onchange="email_validate(this.value);">
+                                        <div class="status" id="status"></div>
+                                        <i class="zmdi zmdi-email small"></i>
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" class="form-control" placeholder="UE Email" id="ueemail" onchange="email_validate(this.value);">
+                                        <div class="status" id="status"></div>
+                                        <i class="zmdi zmdi-email small"></i>
+                                    </div>
+                                </div>
+                                <div class="next">
+                                    <input class="next" type="submit" name="submit_reg" value="next">
+                                    </div>
+                                </div>
+                                
+                            
+
+
+                            
+                              <!-- CONTACT INFORMATION -->
+                              
+                                <div class="tabcontent" id="contact">    
+                                  <div class="form-row">
+                                            <div class="form-holder">
+                                                <input type="number" class="form-control" placeholder="Contact Number" id="cnum">
+                                            </div>
+                                        </div>
+                
+                                        <div class="form-row">
+                                            <div class="form-holder">
+                                                <input type="text" class="form-control" placeholder="Home Address" id="addressa">
+                                            </div>
+                                        </div>
+                
+                                        <div class="form-row">
+                                            <div class="form-holder">
+                                                <input type="text" class="form-control" placeholder="Provincial Address" id="addressb">
+                                            </div>
+                                        </div>
+                
+                                        <div class="form-row form-group">
+                                            <div class="form-holder">
+                                                <input type="text" class="form-control" placeholder="Twitter" id="twitter">
+                                                <i class="zmdi zmdi-twitter small"></i>
+                                            </div>
+                                            <div class="form-holder">
+                                                <input type="text" class="form-control" placeholder="Instagram" id="ig">
+                                                <i class="zmdi zmdi-instagram small"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form-row form-group">
+                                            <div class="form-holder">
+                                                <input type="text" class="form-control" placeholder="Facebook" id="fb">
+                                                <i class="zmdi zmdi-facebook small"></i>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="next">
+                                            <input class="next" type="submit" name="submit_contact" value="next">
+                                            </div>  
+                                    
+                                </div>
+                                
+                           
+                                
+                                
+                    	
+                        
+                
+			
+                  <!--MEMBERSHIP -->
+                    <div class="tabcontent" id="membership">    
+
+                		
+
+                        <h3>In case of emergency: </h3>
+                        <br>
                         <div class="form-row form-group">
-                            <div class="form-holder">
-                                <input type="text" class="form-control" name="twitter" id="twitter" placeholder="Twitter">
-                                <i class="zmdi zmdi-twitter small"></i>
-                            </div>
-                            <div class="form-holder">
-                                <input type="text" class="form-control" name="instagram" id="instagram" placeholder="Instagram">
-                                <i class="zmdi zmdi-instagram small"></i>
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Full Name">
+                    		</div>
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Relationship">
+                    		</div>
+                    	</div>
+                        <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="number" class="form-control" placeholder="Contact Number">
+                                
+                    		</div>
+                    	</div>
+                        <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="number" class="form-control" placeholder="Home Address">
+                                
+                    		</div>
+                        </div>
+
+ 
+                                <div class="form-row">
+                                    <div class="select">
+                                        <div class="form-holder">
+                                            <div class="select-control">Proof of Payment</div>
+                                            <i class="zmdi zmdi-caret-down small"></i>
+                                        </div>
+                                        <ul class="dropdown">
+                                            <li rel="bsCPE">BS Computer Engineering</li>
+                                            <li rel="Two">Others</li>
+                                            
+                                        </ul>
+                                    </div>
+                                <div class="form-holder">
+                               <label class="form-label" for="customFile"></label>
+                                <input type="file" class="form-control" id="customFile" />
                             </div>
                         </div>
-                        <div class="form-row form-group">
-                            <div class="form-holder">
-                                <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Facebook">
-                                <i class="zmdi zmdi-facebook small"></i>
-                            </div>
-                            <div class="form-holder">
-                                <input type="text" class="form-control" name="google" id="google" placeholder="Google">
-                                <i class="zmdi zmdi-google small"></i>
-                            </div>
-                        </div>
+                        <div class="next">
+                            <input class="next" type="submit" name="submit_contact" value="next">
+                            </div>  
                 	</div>
-                </section>
+                
 
-                <!-- SECTION 3 -->
+                <!-- NEXT TAB-->
                 <h4></h4>
-                <section class="section-3">
-                    <div class="inner">
+                  <!-- TERMS AND CONDITION -->
+                    <div class="tabcontent" id="termscon">    
+                        
+                    
                       
-                        <h6>Terms and Conditions</h6>
+                        <h3>Terms and Conditions</h3><br>
                         <div class="form-row">
-                            <h5>1) You are solely responsible and liable for any activity occurring on your account, and
+                            <h5>You are solely responsible and liable for any activity occurring on your account, and
                                 you must keep your account password secret. You must inform us immediately of any breach 
                                  of security or unauthorised use of your account by emailing us at
-                                breach of security or unauthorised use of your account by emailing us at
-                                itd@ue.edu.ph. We will investigate any security breaches.</h5>
-            
-                        <br>
-            
-                                <h5>2) You agree that our content, trademarks, copyright, patents, logos, domain names and other
-                                     related intellectual property rights belong to us and/or our affiliates or licensors and
-                                      you will not do any act that infringes those rights.</h5> </br>
-            
-                                <h5>3)The student is expected and required to meet all admissions requirements before signing an enrollment agreement, 
-                                    meet all financial obligations within the enrollment agreement, and follow cancelation and 
+itd@ue.edu.ph. The student is expected and required to meet all admissions requirements before signing an enrollment agreement, 
+                                    meet all financial obligations within the enrollment agreement, and follow cancellation and 
                                     withdrawal procedures as applicable. The school adheres to confidentiality policies and respects
                                      the student's rights and privacy.</h5>
                         </div>
@@ -173,27 +249,58 @@
 							</label>
 							<div class="form-text-con">
 							<h5>I do accept the Terms and Conditions </h5>
-                        
 							</div>
+                            
+							
 						 </div>
-						 
-                    </div>
-                </section>
-            </form>
+                         <div class="register">
+                         <input type="submit" name="register" class="register" value="Register"></div>
+						 </div>
+                    
+                </div>
+
+                
+               
+            
 		</div>
+        
+        <script src="main.js">
 
+        </script>
+      
+		<script type="text/javascript">
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+    
+            
+    
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+    
+            // FOR TERMS
+            document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+    
+            
+                  
+        
+    
+    
+            
+            
+    
+            
+        </script>
 
-		<script src="js/jquery-3.3.1.min.js"></script>
-		
-		<!-- JQUERY STEP -->
-		<script src="js/jquery.steps.js"></script>
-
-		<!-- DATE-PICKER -->
-		<script src="vendor/date-picker/js/datepicker.js"></script>
-		<script src="vendor/date-picker/js/datepicker.en.js"></script>
-
-		<script src="js/main.js"></script>
-
-<!-- Template created and distributed by Colorlib -->
 </body>
 </html>

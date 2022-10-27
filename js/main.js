@@ -1,55 +1,31 @@
-$(function(){
-	$("#wizard").steps({
-        headerTag: "h4",
-        bodyTag: "section",
-        transitionEffect: "fade",
-        enableAllSteps: true,
-        transitionEffectSpeed: 300,
-        labels: {
-            next: "Next",
-            previous: "Back"
-        },
-        onStepChanging: function (event, currentIndex, newIndex) { 
-            if ( newIndex === 1 ) {
-                $('.steps').addClass('step-2');
-            } else {
-                $('.steps').removeClass('step-2');
-            }
-            if ( newIndex === 2 ) {
-                $('.steps').addClass('step-3');
-            } else {
-                $('.steps').removeClass('step-3');
-            }
-            return true; 
-        }
-    });
-    // Custom Jquery Steps
-    $('.forward').click(function(){
-    	$("#wizard").steps('next');
-    })
-    $('.backward').click(function(){
-        $("#wizard").steps('previous');
-    })
-    // Select
-    $('html').click(function() {
-        $('.select .dropdown').hide(); 
-    });
-    $('.select').click(function(event){
-        event.stopPropagation();
-    });
-    $('.select .select-control').click(function(){
-        $(this).parent().next().toggle().toggleClass('active');
-    })
-    $('.select .dropdown li').click(function(){
-        $(this).parent().toggle();
-        var text = $(this).attr('rel');
-        $(this).parent().prev().find('div').text(text);
-    })
-    // Payment
-    $('.payment-block .payment-item').click(function(){
-        $('.payment-block .payment-item').removeClass('active');
-        $(this).addClass('active');
-    })
-    // Date Picker
-    var dp1 = $('#dp1').datepicker().data('datepicker');
-})
+function Validate(txt) {
+    txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.]+/g, '');
+}
+
+function email_validate(pemail)
+{
+var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+    if(regMail.test(email) == false)
+    {
+    document.getElementById("pemail").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
+    }
+    else
+    {
+    document.getElementById("pemail").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
+    }
+}
+
+function email_validate(ueemail)
+{
+var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+    if(regMail.test(email) == false)
+    {
+    document.getElementById("ueemail").innerHTML    = "<span class='warning'>Email address is not valid yet.</span>";
+    }
+    else
+    {
+    document.getElementById("ueemail").innerHTML	= "<span class='valid'>Thanks, you have entered a valid Email address!</span>";	
+    }
+}

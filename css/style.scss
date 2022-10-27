@@ -101,7 +101,7 @@ img {
 		transition: all 0.3s ease;
 	}
 	&:after {
-		content: "3";
+		content: "4";
 		color: #333;
 		position: absolute;
 		right: 0;
@@ -126,11 +126,21 @@ img {
 			transition: all 0.3s ease;
 		}
 		&:before {
-			content: '';
+			content: '3';
 			left: 100%;
 			transition: all 0.1s ease;
 		}
 	}
+	&.step-4 {
+		ul {
+			width: 100%;
+			transition: all 0.3s ease;
+		}
+		&:before {
+			content: '';
+			left: 100%;
+			transition: all 0.1s ease;
+	
 }
 .inner {
 	padding: 50px 58px;
@@ -379,5 +389,3 @@ img {
 		width: auto;
 		transform: translateX(0);
 	}
-}
-

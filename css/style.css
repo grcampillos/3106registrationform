@@ -56,12 +56,38 @@ img {
   margin: auto;
   align-items: center; }
 
+.fortabs {
+  padding: 5px 10px;
+  background: rgb(222, 213, 213);
+   }
+  
+
 .wizard {
   width: 451px;
   position: relative;
   height: 656px;
   margin-left: 14.7%; }
 
+
+.form-v4-content  { /*white*/
+	background: #fff;
+	width: 150px;
+	border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+	margin: 175px 0;
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+	font-family: 'Montserrat', sans-serif;
+}
 .steps .current-info, .steps .number {
   display: none; }
 
@@ -96,7 +122,7 @@ img {
     font-family: "Poppins-Regular";
     transition: all 0.3s ease; }
   .steps:after {
-    content: "3";
+    content: "4";
     color: rgb(200, 200, 200);
     position: absolute;
     right: 0;
@@ -108,20 +134,26 @@ img {
     transition: all 0.3s ease; }
   .steps.step-2:before {
     content: '2';
-    left: 63.67%;
+    left: 33.67%;
     transition: all 0.3s ease; }
   .steps.step-3 ul {
     width: 100%;
     transition: all 0.3s ease; }
   .steps.step-3:before {
-    content: '';
-    left: 100%;
+    content: '3';
+    left: 63.67%;
     transition: all 0.1s ease; }
+  .steps.step-4:before {
+      content: '';
+      left: 100%;
+      transition: all 0.1s ease; }
 
-.inner {
-  padding: 50px 58px;
+.regform {
+  padding: 20px 58px;
   background: #fff;
-  height: 656px; }
+  height:540px;
+  width: 370px;
+ }
 
 .form-row {
   margin-bottom: 26px; }
@@ -181,13 +213,25 @@ img {
     background: #fff;
     z-index: 9;
     border: 1px solid #4192cb; }
-    .select .dropdown li {
+    .select .dropdown {
       padding: 5px 10px; }
-      .select .dropdown li:hover {
+      .select .dropdown:hover {
         background: #81acee;
         color: #fff; }
     .select .dropdown.active {
       display: block; }
+
+.wrapper .regform select{
+  height: 30px;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
 
 .section-3 h6 {
   font-size: 13px;
@@ -202,30 +246,9 @@ img {
   .payment-block .payment-item {
     width: 47.76%; }
 
-.payment-item {
-  border: 1px solid #e5e5e5;
-  height: 53px;
-  display: flex;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 11px;
-  margin-bottom: 15px;
-  cursor: pointer; }
-  .payment-item .payment-logo {
-    width: 34.53%; }
-  .payment-item .payment-content {
-    width: 65.47%; }
-  .payment-item.active {
-    border: 1px solid #333; }
 
-.actions ul {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 50px;
-  right: 58px;
-  left: 58px; }
-.actions li a {
+
+.NEXT{
   border: none;
   display: inline-flex;
   height: 51px;
@@ -237,7 +260,7 @@ img {
   font-size: 15px;
   position: relative;
   background: rgb(233, 28, 28); }
-  .actions li a:before {
+  .actions .NEXT:before {
     content: "\f2ee";
     font-family: Material-Design-Iconic-Font;
     position: absolute;
@@ -246,7 +269,7 @@ img {
     right: 32px; }
   .actions li a:hover {
     background: #b5b1b1; }
-.actions li:first-child a {
+.actions .NEXT:first-child a {
   background: none;
   border: 1px solid #333;
   padding-left: 50px;
@@ -254,7 +277,7 @@ img {
   .actions li:first-child a:before {
     content: "\f2ea";
     right: 77px; }
-  .actions li:first-child a:hover {
+  .actions .NEXT:first-child a:hover {
     background: #bebebe;
     border-color: transparent;
     color: #fff; }
@@ -346,14 +369,103 @@ img {
     display: block;
 }
 .form-checkbox-b .form-text-con { /*properties for terms-con words*/
-	position: relative;
-	top: 10px;
-   
-    color: #746969;
-    font-size: 14px;
-    font-weight: 400;
 	
+	top: 2px;
+  bottom: 60px;
+  color: #070505;
+  font-size: 14px;
+  font-weight: 400;
+	
+    /* THIS IS FOR TABS*/
+  }
+.fortabs .tab {
+    
+    width: 100%;
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -o-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -webkit-justify-content: space-between;
+  }
+  .fortabs .tab .tab-inner {
+    width: 80%;
+  }
+  .fortabs .tab .tablinks {
+    background: transparent;
+    border: none;
+    outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    padding-bottom: 10px;
+    border-bottom: 4px solid;
+    border-bottom-color: rgba(243, 238, 238, 0.2);
+    width: 100%;
+    
+  
+  }
+  
+  .fortabs .tab .tablinks.active { /*when tab is clicked*/
+    font-weight: 700;
+    color: rgb(239, 94, 94);
+    border-bottom-color: #ec5e5e;
 
+  }
+  
+  .wrapper .regform .buttons {
+  position:absolute;
+	left: 460px;
+	background: #ff3030;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 130px;
+	border: none;
+	margin: 6px 0 50px 0px;
+	cursor: pointer;
+	color: #fff;
+	font-weight: 700;
+	font-size: 15px;
+  }
+.register { /*properties for register button*/
+    position:absolute;
+    left: 180px;
+    margin-top: 5px;
+    background: #4c4848;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 130px;
+    border: none;
+    margin: 6px 0 50px 0px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Poppins-Regular";
+}
+.next{
+    position: fixed;
+    left: 400px;
+    
+    background: #4c4848;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 80px;
+    border: none;
+    margin: 6px 0 50px 0px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Poppins-Regular";
+
+}
 @media (max-width: 1500px) {
   .steps {
     bottom: -40px; }
@@ -380,10 +492,7 @@ img {
     margin-left: 0;
     margin-bottom: 100px; }
 
-  .inner {
-    padding: 30px 20px;
-    height: auto; }
-
+  
   .actions ul {
     position: static;
     margin: 0 20px; }
@@ -401,3 +510,4 @@ img {
     transform: translateX(0); } }
 
 /*# sourceMappingURL=style.css.map */
+  
