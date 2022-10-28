@@ -58,7 +58,7 @@
                                             <input type="text" class="form-control" placeholder="First Name" id="fname" onkeyup = "Validate(this)" required >
                                         </div>
                                         <div class="form-holder">
-                                            <input type="text" class="form-control" placeholder="Middle Name" id="mname" onkeyup = "Validate(this)" required >
+                                            <input type="text" class="form-control" placeholder="Middle Name" id="mname" onkeyup = "Validate(this)"  >
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -68,10 +68,10 @@
                                     </div>
                                 
                                 <div class="form-row">
-                                    <div class="select">
+                                    <div class="dropdowns">
                                         <div class="form-holder">
-                                            <select name="yearlevel">
-                                                <option value="yearlevel">Yeal Level</option>
+                                            <select name="yearlevel" id="yearlevel" required>
+                                                <option value="">Yeal Level</option>
                                                 <option value="two">First Year</option>
                                                 <option value="two">Second Year</option>
                                                 <option value="three">Third Year</option>
@@ -86,8 +86,8 @@
                                     <div class="select">
                                         <div class="form-holder">
                                             
-                                            <select name="course">
-                                                <option value="course">Course</option>
+                                            <select name="course" id="course" required>
+                                                <option value="">Course</option>
                                                 <option value="cpe">BS Computer Engineering</option>
                                                 <option value="others">Others</option>
                                             </select>
@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-holder">
-                                        <input type="text" class="form-control" placeholder="Personal Email" id="pemail" onchange="email_validate(this.value);">
+                                        <input type="text" class="form-control" placeholder="Personal Email" id="pemail" required>
                                         <div class="status" id="status"></div>
                                         <i class="zmdi zmdi-email small"></i>
                                     </div>
@@ -108,15 +108,17 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-holder">
-                                        <input type="text" class="form-control" placeholder="UE Email" id="ueemail" onchange="email_validate(this.value);">
+                                        <input type="text" class="form-control" placeholder="UE Email" id="ueemail" required>
                                         <div class="status" id="status"></div>
                                         <i class="zmdi zmdi-email small"></i>
                                     </div>
                                 </div>
                                 <div class="next">
                                     <input class="next" type="submit" name="submit_reg" value="next">
-                                    </div>
                                 </div>
+                            </div>
+
+                                
                                 
                             
 
@@ -127,13 +129,13 @@
                                 <div class="tabcontent" id="contact">    
                                   <div class="form-row">
                                             <div class="form-holder">
-                                                <input type="number" class="form-control" placeholder="Contact Number" id="cnum">
+                                                <input type="number" class="form-control" placeholder="Contact Number" id="cnum" required>
                                             </div>
                                         </div>
                 
                                         <div class="form-row">
                                             <div class="form-holder">
-                                                <input type="text" class="form-control" placeholder="Home Address" id="addressa">
+                                                <input type="text" class="form-control" placeholder="Home Address" id="addressa" required>
                                             </div>
                                         </div>
                 
@@ -142,6 +144,7 @@
                                                 <input type="text" class="form-control" placeholder="Provincial Address" id="addressb">
                                             </div>
                                         </div>
+                                        
                 
                                         <div class="form-row form-group">
                                             <div class="form-holder">
@@ -159,7 +162,7 @@
                                                 <i class="zmdi zmdi-facebook small"></i>
                                             </div>
                                             
-                                        </div>
+                                        </div> <br><br><br>
                                         <div class="next">
                                             <input class="next" type="submit" name="submit_contact" value="next">
                                             </div>  
@@ -182,21 +185,21 @@
                         <br>
                         <div class="form-row form-group">
                     		<div class="form-holder">
-                    			<input type="text" class="form-control" placeholder="Full Name">
+                    			<input type="text" class="form-control" placeholder="Full Name" id="full" required>
                     		</div>
                     		<div class="form-holder">
-                    			<input type="text" class="form-control" placeholder="Relationship">
+                    			<input type="text" class="form-control" placeholder="Relationship" id="rs" required>
                     		</div>
                     	</div>
                         <div class="form-row">
                     		<div class="form-holder">
-                    			<input type="number" class="form-control" placeholder="Contact Number">
+                    			<input type="number" class="form-control" placeholder="Contact Number" id="cnumber" required>
                                 
                     		</div>
                     	</div>
                         <div class="form-row">
                     		<div class="form-holder">
-                    			<input type="number" class="form-control" placeholder="Home Address">
+                    			<input type="number" class="form-control" placeholder="Home Address" id="haddress" required>
                                 
                     		</div>
                         </div>
@@ -205,34 +208,41 @@
                                 <div class="form-row">
                                     <div class="select">
                                         <div class="form-holder">
-                                            <div class="select-control">Proof of Payment</div>
+                                            
+                                            <select name="payment" id="payment" required>
+                                                <option value="">Proof of Payment</option>
+                                                <option value="new">New</option>
+                                                <option value="renewal">Renewal</option>
+                                                <option value="honorary">Honorary</option>
+                                            </select>
                                             <i class="zmdi zmdi-caret-down small"></i>
                                         </div>
-                                        <ul class="dropdown">
-                                            <li rel="bsCPE">BS Computer Engineering</li>
-                                            <li rel="Two">Others</li>
+                                        
+                                            
+                                        
+                                    </div>
                                             
                                         </ul>
                                     </div>
                                 <div class="form-holder">
                                <label class="form-label" for="customFile"></label>
-                                <input type="file" class="form-control" id="customFile" />
-                            </div>
+                                <input type="file" class="form-control" id="customFile" required>
+                            </div><br><div class="next">
+                                <input class="next" type="submit" name="submit_contact" value="next">
+                                </div> 
                         </div>
-                        <div class="next">
-                            <input class="next" type="submit" name="submit_contact" value="next">
-                            </div>  
-                	</div>
+                        
+                    
                 
 
                 <!-- NEXT TAB-->
-                <h4></h4>
+                
                   <!-- TERMS AND CONDITION -->
                     <div class="tabcontent" id="termscon">    
                         
                     
                       
-                        <h3>Terms and Conditions</h3><br>
+                        <h3>Terms and Conditions</h3>
                         <div class="form-row">
                             <h5>You are solely responsible and liable for any activity occurring on your account, and
                                 you must keep your account password secret. You must inform us immediately of any breach 
@@ -244,7 +254,7 @@ itd@ue.edu.ph. The student is expected and required to meet all admissions requi
                         </div>
                         <div class="form-checkbox-b">
 							<label class="container">
-								  <input type="checkbox" name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">
+								  <input type="checkbox" name="terms"  onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">
 								  <span class="checkmark"></span>
 							</label>
 							<div class="form-text-con">

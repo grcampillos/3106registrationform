@@ -28,8 +28,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   cursor: pointer; }
-  select option[value=""][disabled] {
-    display: none; }
+  }
 
 p, h1, h2, h3, h4, h5, h6, ul {
   margin: 0; }
@@ -96,57 +95,7 @@ img {
   text-align: center;
   margin-bottom: 29px; }
 
-.steps {
-  height: 2px;
-  position: absolute;
-  width: 39.91%;
-  background: #b7b2ab;
-  bottom: -52px;
-  left: 50%;
-  transform: translateX(-50%); }
-  .steps ul {
-    height: 2px;
-    position: absolute;
-    background: rgb(251, 251, 251);
-    width: 33.33%;
-    bottom: 0;
-    left: 0;
-    transition: all 0.3s ease; }
-  .steps:before {
-    content: "1";
-    color: rgb(200, 200, 200);
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    font-size: 13px;
-    font-family: "Poppins-Regular";
-    transition: all 0.3s ease; }
-  .steps:after {
-    content: "4";
-    color: rgb(200, 200, 200);
-    position: absolute;
-    right: 0;
-    bottom: 3px;
-    font-size: 13px;
-    font-family: "Poppins-Regular"; }
-  .steps.step-2 ul {
-    width: 66.67%;
-    transition: all 0.3s ease; }
-  .steps.step-2:before {
-    content: '2';
-    left: 33.67%;
-    transition: all 0.3s ease; }
-  .steps.step-3 ul {
-    width: 100%;
-    transition: all 0.3s ease; }
-  .steps.step-3:before {
-    content: '3';
-    left: 63.67%;
-    transition: all 0.1s ease; }
-  .steps.step-4:before {
-      content: '';
-      left: 100%;
-      transition: all 0.1s ease; }
+
 
 .regform {
   padding: 20px 58px;
@@ -194,32 +143,7 @@ img {
   .form-control:-moz-placeholder {
     color: #333; }
 
-.select {
-  position: relative; }
-  .select .select-control {
-    height: 30px;
-    border: none;
-    border-bottom: 1px solid #333;
-    width: 100%;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center; }
-  .select .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background: #fff;
-    z-index: 9;
-    border: 1px solid #4192cb; }
-    .select .dropdown {
-      padding: 5px 10px; }
-      .select .dropdown:hover {
-        background: #81acee;
-        color: #fff; }
-    .select .dropdown.active {
-      display: block; }
+
 
 .wrapper .regform select{
   height: 30px;
@@ -248,46 +172,7 @@ img {
 
 
 
-.NEXT{
-  border: none;
-  display: inline-flex;
-  height: 51px;
-  width: 118px;
-  align-items: center;
-  color: #fff;
-  cursor: pointer;
-  padding-left: 33px;
-  font-size: 15px;
-  position: relative;
-  background: rgb(233, 28, 28); }
-  .actions .NEXT:before {
-    content: "\f2ee";
-    font-family: Material-Design-Iconic-Font;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 32px; }
-  .actions li a:hover {
-    background: #b5b1b1; }
-.actions .NEXT:first-child a {
-  background: none;
-  border: 1px solid #333;
-  padding-left: 50px;
-  color: #333; }
-  .actions li:first-child a:before {
-    content: "\f2ea";
-    right: 77px; }
-  .actions .NEXT:first-child a:hover {
-    background: #bebebe;
-    border-color: transparent;
-    color: #fff; }
-.actions li:last-child a {
-  padding-left: 28px; }
-  .actions li:last-child a:before {
-    right: 27px; }
-.actions li[aria-disabled="true"] a {
-  opacity: 0;
-  transition: all 1s; }
+
 
   
 .form-checkbox {
@@ -450,10 +335,10 @@ img {
     font-family: "Poppins-Regular";
 }
 .next{
-    position: fixed;
-    left: 400px;
-    
-    background: #4c4848;
+    position: absolute;
+    left: 250px;
+  
+    background: #e33636;
     border-top-left-radius: 8px;
     border-bottom-right-radius: 8px;
     width: 80px;
