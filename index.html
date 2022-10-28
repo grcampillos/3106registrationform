@@ -50,12 +50,13 @@
                         
 
                             <!-- PERSONAL INFORMATION -->
+                            
                                 <div class="tabcontent" id="personal">
 
 
                                     <div class="form-row form-group">
                                         <div class="form-holder">
-                                            <input type="text" class="form-control" placeholder="First Name" id="fname" onkeyup = "Validate(this)" required >
+                                            <input type="text" class="form-control" placeholder="First Name" id="fname"  required >
                                         </div>
                                         <div class="form-holder">
                                             <input type="text" class="form-control" placeholder="Middle Name" id="mname" onkeyup = "Validate(this)"  >
@@ -68,6 +69,7 @@
                                     </div>
                                 
                                 <div class="form-row">
+                                    
                                     <div class="dropdowns">
                                         <div class="form-holder">
                                             <select name="yearlevel" id="yearlevel" required>
@@ -99,13 +101,10 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-holder">
-                                        <input type="text" class="form-control" placeholder="Personal Email" id="pemail" required>
-                                        <div class="status" id="status"></div>
-                                        <i class="zmdi zmdi-email small"></i>
-                                    </div>
-                                    
-                                </div>
+                                <div class="form-holder">
+                                    <input type="number" class="form-control" placeholder="Student No." id="studno" required>
+                                </div></div>
+                                
                                 <div class="form-row">
                                     <div class="form-holder">
                                         <input type="text" class="form-control" placeholder="UE Email" id="ueemail" required>
@@ -117,7 +116,6 @@
                                     <input class="next" type="submit" name="submit_reg" value="next">
                                 </div>
                             </div>
-
                                 
                                 
                             
@@ -126,7 +124,15 @@
                             
                               <!-- CONTACT INFORMATION -->
                               
-                                <div class="tabcontent" id="contact">    
+                                <div class="tabcontent" id="contact">   
+                                    <div class="form-row">
+                                        <div class="form-holder">
+                                            <input type="text" class="form-control" placeholder="Personal Email" id="pemail" required>
+                                            <div class="status" id="status"></div>
+                                            <i class="zmdi zmdi-email small"></i>
+                                        </div>
+                                        
+                                    </div> 
                                   <div class="form-row">
                                             <div class="form-holder">
                                                 <input type="number" class="form-control" placeholder="Contact Number" id="cnum" required>
@@ -162,7 +168,7 @@
                                                 <i class="zmdi zmdi-facebook small"></i>
                                             </div>
                                             
-                                        </div> <br><br><br>
+                                        </div> 
                                         <div class="next">
                                             <input class="next" type="submit" name="submit_contact" value="next">
                                             </div>  
@@ -254,7 +260,7 @@ itd@ue.edu.ph. The student is expected and required to meet all admissions requi
                         </div>
                         <div class="form-checkbox-b">
 							<label class="container">
-								  <input type="checkbox" name="terms"  onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">
+								  <input type="checkbox" name="terms" class="field_terms" id="field_terms">
 								  <span class="checkmark"></span>
 							</label>
 							<div class="form-text-con">
@@ -264,7 +270,7 @@ itd@ue.edu.ph. The student is expected and required to meet all admissions requi
 							
 						 </div>
                          <div class="register">
-                         <input type="submit" name="register" class="register" value="Register"></div>
+                         <input type="submit" name="register" class="register" value="Register" onclick="agreeTerms();"></div>
 						 </div>
                     
                 </div>
@@ -279,35 +285,7 @@ itd@ue.edu.ph. The student is expected and required to meet all admissions requi
         </script>
       
 		<script type="text/javascript">
-            function openCity(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
     
-            
-    
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
-    
-            // FOR TERMS
-            document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
-    
-            
-                  
-        
-    
-    
-            
-            
     
             
         </script>
