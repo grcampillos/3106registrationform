@@ -144,7 +144,7 @@
                                     </div> 
                                   <div class="form-row">
                                             <div class="form-holder">
-                                                <input type="number" class="form-control" placeholder="Contact Number" id="cnum" required
+                                                <input type="tel" class="form-control" placeholder="Contact Number" id="cnum" required
                                                 oninvalid="this.setCustomValidity('Please indicate your contact number.')"
                                                 oninput="this.setCustomValidity('')">
                                             </div>
@@ -197,7 +197,7 @@
                   <!--EMERGENCY-->
                   <div class="tabcontent" id="emergency">
                     <h3>In case of emergency: </h3>
-                    <br>
+                
                     <div class="form-row form-group">
                         <div class="form-holder">
                             <input type="text" class="form-control" placeholder="Full Name" id="full" required
@@ -212,7 +212,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-holder">
-                            <input type="number" class="form-control" placeholder="Contact Number" id="cnumber" required
+                            <input type="tel" class="form-control" placeholder="Contact Number" id="cnumber" required
                             oninvalid="this.setCustomValidity('Enter the contact number of your relative.')"
                             oninput="this.setCustomValidity('')">
                             
@@ -220,7 +220,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-holder">
-                            <input type="number" class="form-control" placeholder="Home Address" id="haddress" required
+                            <input type="text" class="form-control" placeholder="Home Address" id="haddress" required
                             oninvalid="this.setCustomValidity('Enter the Home Address of your relative.')"
                             oninput="this.setCustomValidity('')">
                             
@@ -233,6 +233,7 @@
                   <!--MEMBERSHIP -->
 
                     <div class="tabcontent" id="membership">    
+                        <h3>Membership: </h3>
                 	
                                 <div class="form-row">
                                     <div class="select">
@@ -259,7 +260,7 @@
                                <label class="form-label" for="customFile"></label>
                                 <input type="file" class="form-control" id="customFile" required
                                 oninvalid="this.setCustomValidity('Submit your proof of payment.')"
-                                oninput="this.setCustomValidity('')">>
+                                oninput="this.setCustomValidity('')">
                             </div><br><div class="next">
                                 <input class="next" type="submit" name="submit_contact" value="next">
                                 </div> 
@@ -275,8 +276,8 @@
                         
                     
                       
-                        <h3>Terms and Conditions</h3>
-                        <div class="form-row">
+                        
+                        <div class="form-row" style="text-align: center;"  >
                             <h5>You are solely responsible and liable for any activity occurring on your account, and
                                 you must keep your account password secret. You must inform us immediately of any breach 
                                  of security or unauthorised use of your account by emailing us at
